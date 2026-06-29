@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <title>ADF — Arafat Digital Futurist</title>
+    <meta name="description" content="ADF — Arafat Digital Futurist. Services créatifs sur mesure, boutique digitale et assistant IA ADF IA." />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#f8fafc" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ADF" />
+    <link rel="apple-touch-icon" href="/icons/icon-512.png" />
+    <link rel="icon" type="image/png" href="/icons/icon-512.png" />
+    <style>
+      html, body, #root { height: 100%; }
+      body { margin: 0; background: #f8fafc; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      #boot {
+        position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+        background: #f8fafc; z-index: 9999; transition: opacity .4s ease;
+      }
+      #boot .spinner {
+        width: 42px; height: 42px; border-radius: 50%;
+        border: 3.5px solid #e0f2fe; border-top-color: #0ea5e9;
+        animation: spin .7s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="boot"><div class="spinner"></div></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
